@@ -20,3 +20,9 @@ message HelloReply {
   string message = 1;
   google.protobuf.Any anyData = 2;
 }
+
+message JsonData {
+  string name = 1;
+  int32 age = 2;
+  string email = 3;
+}

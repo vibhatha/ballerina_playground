@@ -1,9 +1,11 @@
 import ballerina/grpc;
 import ballerina/protobuf.types.'any as pbAny;
-listener grpc:Listener grpcListener = new (9090);
+
+listener grpc:Listener ep = new (9090);
 
 @grpc:Descriptor {value: HELLOWORLD_DESC}
-service "Greeter" on grpcListener {
+service "Greeter" on ep {
+
     remote function sayHello(HelloRequest value) returns HelloReply|error {
 
         json jsonData = {
