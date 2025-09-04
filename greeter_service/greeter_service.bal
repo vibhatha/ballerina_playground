@@ -7,13 +7,11 @@ service "Greeter" on grpcListener {
     remote function sayHello(HelloRequest value) returns HelloReply|error {
         
         map<anydata> personData = {
-            "data": {
-                "name": "John Doe",
-                "age": 30,
-                "email": "john.doe@example.com",
-                "department": "Engineering",
-                "salary": 75000.50
-            }
+            "name": "John Doe",
+            "age": 30,
+            "email": "john.doe@example.com",
+            "department": "Engineering",
+            "salary": 75000.50
         };
 
         pbAny:Any anyData = check pbAny:pack(personData);

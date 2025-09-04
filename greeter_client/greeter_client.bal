@@ -14,5 +14,10 @@ public function main() returns error? {
     
     // Unpack the map from Any
     JsonObject personData = check pbAny:unpack(sayHello.anyData, JsonObject);
-    io:println(`Person Data: ${personData}`);
+    
+    io:println(`Person Data: ${personData["name"]}`);
+    io:println(`Person Data: ${personData["age"]}`);
+    io:println(`Person Data: ${personData["email"]}`);
+    io:println(`Person Data: ${personData["department"]}`);
+    io:println(`Person Data: ${personData["salary"]}`);
 }
