@@ -9,7 +9,8 @@ service "Greeter" on grpcListener {
         json jsonData = {
             "name": "John Doe",
             "age": 30,
-            "email": "john.doe@example.com"
+            "email": "john.doe@example.com",
+            "salary": 75000.50
         };
 
         pbAny:Any anyData = check pbAny:pack(jsonData.toJsonString());
