@@ -1,0 +1,36 @@
+diff --git a/types/client/main.bal b/types/client/main.bal
+index 8088cc0..63808d3 100644
+--- a/types/client/main.bal
++++ b/types/client/main.bal
+@@ -11,10 +11,10 @@ public function main() returns error? {
+     json employee_data = {
+         "columns": ["id", "name", "age", "department", "salary"],
+         "rows": [
+-            [1, "John Doe", 30, "Engineering", 75000.50],
++            [1, "John Doe", 30, "Engineering", 75000.50d],
+             [2, "Jane Smith", 25, "Marketing", 65000],
+-            [3, "Bob Wilson", 35, "Sales", 85000.75],
+-            [4, "Alice Brown", 28, "Engineering", 70000.25],
++            [3, "Bob Wilson", 35, "Sales", 85000.75d],
++            [4, "Alice Brown", 28, "Engineering", 70000.25d],
+             [5, "Charlie Davis", 32, "Finance", 80000]
+         ]
+     };
+diff --git a/types/server/main.bal b/types/server/main.bal
+index f2c16e9..23c665d 100644
+--- a/types/server/main.bal
++++ b/types/server/main.bal
+@@ -22,10 +22,10 @@ service / on new http:Listener(9091) {
+         json mock_data = {
+             "columns": ["id", "name", "age", "department", "salary"],
+             "rows": [
+-                [1, "John Doe", 30, "Engineering", 75000.50],
++                [1, "John Doe", 30, "Engineering", 75000.50d],
+                 [2, "Jane Smith", 25, "Marketing", 65000],
+-                [3, "Bob Wilson", 35, "Sales", 85000.75],
+-                [4, "Alice Brown", 28, "Engineering", 70000.25],
++                [3, "Bob Wilson", 35, "Sales", 85000.75d],
++                [4, "Alice Brown", 28, "Engineering", 70000.25d],
+                 [5, "Charlie Davis", 32, "Finance", 80000]
+             ]
+         };

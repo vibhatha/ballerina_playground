@@ -11,10 +11,10 @@ public function main() returns error? {
     json employee_data = {
         "columns": ["id", "name", "age", "department", "salary"],
         "rows": [
-            [1, "John Doe", 30, "Engineering", 75000.50],
+            [1, "John Doe", 30, "Engineering", 75000.50d],
             [2, "Jane Smith", 25, "Marketing", 65000],
-            [3, "Bob Wilson", 35, "Sales", 85000.75],
-            [4, "Alice Brown", 28, "Engineering", 70000.25],
+            [3, "Bob Wilson", 35, "Sales", 85000.75d],
+            [4, "Alice Brown", 28, "Engineering", 70000.25d],
             [5, "Charlie Davis", 32, "Finance", 80000]
         ]
     };
